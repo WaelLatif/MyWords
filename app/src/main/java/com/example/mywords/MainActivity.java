@@ -162,25 +162,25 @@ public class MainActivity extends AppCompatActivity {
 
         String[] strFonts =
                 {"Castelar", "Aldhabi", "Andlso", "Itcblka", "Bradhit", "Cambria"};
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<>
                 (this, android.R.layout.simple_spinner_item, strFonts);
         sFont.setAdapter(adapter1);
     }
 
     /**
      * to set the font size
-     * @param largOrSmall
+     * @param lagOrSmall
      */
-    protected void setSize(char largOrSmall) {
+    protected void setSize(char lagOrSmall) {
         int size = Integer.parseInt(txtSize.getText().toString());
-        if (largOrSmall == '+') size++;
+        if (lagOrSmall == '+') size++;
         else size--;
 
         if (size > 50) size = 50;
         if (size < 6) size = 6;
 
         txtWords.setTextSize(size);
-        txtSize.setText(size + "");
+        txtSize.setText(size+"");
     }
 
     /*protected void smallText(){
